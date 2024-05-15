@@ -1,0 +1,122 @@
+<style>
+  *{
+    color:#DDD;
+    text-shadow:0px 0px 1px #111;
+  }
+  h2,h1,button,p,hr{
+    margin:0px;
+    color:#111;
+  }
+  article,p,h2{
+    padding:10px;
+    background:#CCCCCC;
+  }
+
+  button{
+    padding:10px;
+    border:none;
+  }
+  input{
+    display:none;
+  }
+  label{
+    padding:5px;
+  }
+  body{
+    background:#555;
+    display:grid;
+    gap:10px;
+    color:#DDD:
+  }
+
+  section{
+    display:flex;
+    gap:20px;
+    flex-direction:row;
+    border:1px solid black;
+  }
+
+  section div{
+    flex:1;
+  }
+
+  input.or[type="checkbox"]:checked ~ .output-or{
+    background:red;
+  }
+
+  input.or:not(:checked) ~ .output-or{
+    background: blue;
+  }
+
+  input.or:checked + label{
+    background:red;
+  }
+
+  input.or:not(:checked) + label{
+    background:blue;
+  }
+
+  .not:checked ~ .output-not{
+    background:blue;
+  }
+
+  input.not:not(:checked) ~ .output-not{
+    background: red;
+  }
+
+  input.not:checked + label{
+    background:red;
+  }
+
+  input.not:not(:checked) + label{
+    background:blue;
+  }
+
+
+  .and:checked ~ .output-and{
+    background:red;
+  }
+
+  input.and:not(:checked) ~ .output-and{
+    background: blue;
+  }
+
+  input.and:checked + label{
+    background:red;
+  }
+
+  input.and:not(:checked) + label{
+    background:blue;
+  }
+</style>
+<h2>LOGIC GATES</h2>
+<p>Representation :<br><button style="background:red;">ON</button><button style="background:blue;color:#DDD;">OFF</button></p>
+<article>
+  <h1>OR GATE</h1>
+  <section id="or">
+    <input type="checkbox" name="or-gate" class="or" id="or-in1" />
+    <label for="or-in1">INPUT 1</label>
+
+    <input type="checkbox" name="or-gate" class="or" id="or-in2" />
+    <label for="or-in2">INPUT 2</label>
+
+    <div width=100px height=100px class="output-or"></div>
+  </section>
+  <h1>NOT GATE</h1>
+  <section>
+    <input type="checkbox" name="not-gate" class="not" id="not-in1" />
+    <label for="not-in1">INPUT 1</label>
+
+    <div width=100px height=100px class="output-not"></div>
+  </section>
+  <h1>AND GATE</h1>
+  <section>
+    <input type="checkbox" name="and-gate" class="and" id="and-in1" />
+    <label for="and-in1">INPUT 1</label>
+    <input type="checkbox" name="and-gate" class="and" id="and-in2" />
+    <label for="and-in2">INPUT 2</label>
+
+    <div width=100px height=100px class="output-and"></div>
+  </section>
+</article>
+</div>
